@@ -1,0 +1,3196 @@
+/* ==========================
+   RESET
+========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    background: #faf8ff;
+
+    color: #17133a;
+}
+
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.client-sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 235px;
+    height: 100vh;
+
+    background: #f5f0ff;
+
+    border-right:
+        1px solid #e6ddf7;
+
+    padding: 24px 15px;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.client-brand {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+
+    padding:
+        0 12px
+        25px;
+}
+
+
+.client-brand strong {
+    font-size: 18px;
+
+    letter-spacing:
+        0.5px;
+
+    color: #4c1d95;
+}
+
+
+.client-brand span {
+    font-size: 10px;
+
+    color: #8d7aa8;
+
+    letter-spacing:
+        1.5px;
+}
+
+
+.client-navigation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.client-nav-item {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    padding:
+        11px 12px;
+
+    border-radius: 8px;
+
+    color: #5b5078;
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+
+.client-nav-item:hover {
+    background: #e9ddff;
+
+    color: #5b21b6;
+}
+
+
+.client-nav-item.active {
+    background: #7c3aed;
+
+    color: white;
+
+    font-weight: 600;
+}
+
+
+.client-nav-item span:first-child {
+    width: 18px;
+
+    text-align: center;
+
+    font-size: 16px;
+}
+
+
+.client-sidebar-bottom {
+    margin-top: auto;
+}
+
+
+/* ==========================
+   MAIN
+========================== */
+
+.client-main {
+    margin-left: 235px;
+
+    min-height: 100vh;
+
+    padding: 0 36px 40px;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.client-header {
+    height: 70px;
+
+    margin:
+        0 -36px 36px;
+
+    padding:
+        0 36px;
+
+    background: #ffffff;
+
+    border-bottom:
+        1px solid #e7def5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.client-header-left h1 {
+    margin:
+        0 0 5px;
+
+    font-size: 24px;
+
+    color: #17133a;
+}
+
+
+.client-header-left p {
+    margin: 0;
+
+    color: #8b7aa5;
+
+    font-size: 13px;
+}
+
+
+.client-header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.client-notification-button {
+    width: 38px;
+
+    height: 38px;
+
+    border:
+        1px solid #e2d7f2;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #65439b;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+
+.client-notification-button:hover {
+    background: #f5efff;
+}
+
+
+.client-account {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+
+.client-account-avatar {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    background: #e2d2ff;
+
+    color: #5b21b6;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+
+.client-account strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.client-account small {
+    display: block;
+
+    color: #8d7aa8;
+
+    font-size: 11px;
+
+    margin-top: 2px;
+}
+
+
+/* ==========================
+   PAGE
+========================== */
+
+.client-page {
+    max-width: 1150px;
+}
+
+
+/* ==========================
+   CAMPAIGN WELCOME
+========================== */
+
+.client-welcome {
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #faf7ff 100%
+        );
+
+    border:
+        1px solid #dccbfa;
+
+    border-radius: 16px;
+
+    padding: 25px 30px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+
+    box-shadow:
+        0 2px 8px rgba(
+            91,
+            33,
+            182,
+            0.04
+        );
+}
+
+
+.client-eyebrow {
+    margin:
+        0 0 7px;
+
+    font-size: 11px;
+
+    color: #8b78aa;
+
+    letter-spacing:
+        0.5px;
+
+    font-weight: 500;
+}
+
+
+.client-welcome h2 {
+    margin:
+        0 0 9px;
+
+    font-size: 23px;
+
+    color: #17133a;
+}
+
+
+.client-welcome p:not(.client-eyebrow) {
+    margin: 0;
+
+    color: #8b7aa5;
+
+    font-size: 13px;
+
+    max-width: 650px;
+}
+
+
+.client-campaign-status {
+    text-align: right;
+
+    min-width: 110px;
+}
+
+
+.client-campaign-status span {
+    display: block;
+
+    color: #8b7aa5;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+
+.client-campaign-status strong {
+    font-size: 13px;
+
+    color: #16a34a;
+
+    background: #eafaf0;
+
+    padding:
+        5px 10px;
+
+    border-radius: 20px;
+}
+
+
+/* ==========================
+   DASHBOARD GRID
+========================== */
+
+.client-dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.35fr 0.9fr;
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+/* ==========================
+   CARDS
+========================== */
+
+.client-card {
+    background: #ffffff;
+
+    border:
+        1px solid #e3daf1;
+
+    border-radius: 16px;
+
+    padding: 20px;
+
+    box-shadow:
+        0 2px 8px rgba(
+            91,
+            33,
+            182,
+            0.025
+        );
+}
+
+
+.client-card-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 16px;
+}
+
+
+.client-card-header h3 {
+    margin:
+        0 0 5px;
+
+    font-size: 16px;
+
+    color: #17133a;
+}
+
+
+.client-card-header p {
+    margin: 0;
+
+    color: #9a8aad;
+
+    font-size: 12px;
+}
+
+
+.client-card-header > span {
+    color: #7654a5;
+
+    font-size: 16px;
+}
+
+
+/* ==========================
+   LISTS
+========================== */
+
+.client-empty-state {
+    padding:
+        25px 10px;
+
+    text-align: center;
+
+    color: #aaa0b8;
+
+    font-size: 12px;
+}
+
+
+/* ==========================
+   BRIEF
+========================== */
+
+.client-brief-preview {
+    margin-bottom: 20px;
+}
+
+
+.client-link-button {
+    border: none;
+
+    background: transparent;
+
+    color: #673ab7;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    font-weight: 500;
+}
+
+
+.client-link-button:hover {
+    color: #4c1d95;
+
+    text-decoration: underline;
+}
+
+
+.client-brief-content {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.client-brief-content > div {
+    background: #f8f5ff;
+
+    border:
+        1px solid #eee7fa;
+
+    border-radius: 10px;
+
+    padding: 14px;
+}
+
+
+.client-brief-content span {
+    display: block;
+
+    color: #9a8aad;
+
+    font-size: 10px;
+
+    margin-bottom: 7px;
+}
+
+
+.client-brief-content strong {
+    font-size: 12px;
+
+    font-weight: 500;
+
+    color: #5d5070;
+}
+
+
+/* ==========================
+   PURPLE ACCENTS
+========================== */
+
+.client-card button:hover {
+    color: #6d28d9;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 800px) {
+
+    .client-sidebar {
+        width: 190px;
+    }
+
+    .client-main {
+        margin-left: 190px;
+
+        padding:
+            0 20px 30px;
+    }
+
+    .client-header {
+        margin:
+            0 -20px 25px;
+
+        padding:
+            0 20px;
+    }
+
+    .client-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .client-brief-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ==========================
+   CLIENT CONTENT
+========================== */
+
+.client-content-item {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+    background: #faf8ff;
+
+    border:
+        1px solid #eee7fa;
+
+    border-radius: 10px;
+}
+
+
+.client-content-item strong {
+    display: block;
+
+    font-size: 13px;
+
+    color: #33205f;
+}
+
+
+.client-content-item small {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #9a8aad;
+
+    font-size: 11px;
+}
+
+
+.client-content-status {
+    padding:
+        5px 10px;
+
+    border-radius: 20px;
+
+    background: #eee5ff;
+
+    color: #6d28d9;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+/* ==========================
+   CLIENT ASSET LIBRARY
+========================== */
+
+.client-asset-library {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(240px, 1fr)
+        );
+
+    gap: 16px;
+}
+
+
+.client-asset-card {
+    background: white;
+
+    border:
+        1px solid #eee7fa;
+
+    border-radius: 14px;
+
+    padding: 18px;
+
+    box-shadow:
+        0 4px 14px
+        rgba(124, 58, 237, 0.06);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.client-asset-card:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 20px
+        rgba(124, 58, 237, 0.10);
+}
+
+
+.client-asset-icon {
+    font-size: 30px;
+
+    margin-bottom: 12px;
+}
+
+
+.client-asset-info strong {
+    display: block;
+
+    color: #33205f;
+
+    font-size: 14px;
+}
+
+
+.client-asset-info small {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #9a8aad;
+
+    font-size: 11px;
+}
+
+
+.client-view-asset {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 9px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #7c3aed;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+
+.client-view-asset:hover {
+    background: #6d28d9;
+}
+
+
+/* ==========================
+   CLIENT ASSET CARD
+========================== */
+
+.client-asset-card-top {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+}
+
+
+.client-asset-icon {
+    font-size: 30px;
+}
+
+
+.client-asset-status {
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* PENDING REVIEW */
+
+.status-pending {
+    background: #fff1dc;
+
+    color: #c26a00;
+}
+
+
+/* NEEDS REVISION */
+
+.status-revision {
+    background: #fde8e8;
+
+    color: #c24141;
+}
+
+
+/* APPROVED */
+
+.status-approved {
+    background: #e7f7ed;
+
+    color: #27804b;
+}
+
+
+/* ==========================
+   REVIEW BUTTON
+========================== */
+
+.client-view-asset {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 9px;
+
+    border: 1px solid #7c3aed;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #7c3aed;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.client-view-asset:hover {
+    background: #f3edff;
+}
+
+
+/* ==========================
+   REVIEW OVERLAY
+========================== */
+
+.client-asset-review {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+}
+
+
+.client-asset-review.hidden {
+    display: none;
+}
+
+
+.client-review-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(30, 20, 50, 0.35);
+
+    backdrop-filter:
+        blur(3px);
+}
+
+
+/* ==========================
+   REVIEW PANEL
+========================== */
+
+.client-review-panel {
+    position: relative;
+
+    z-index: 1;
+
+    width: min(
+        720px,
+        100%
+    );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 24px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(40, 20, 70, 0.2);
+}
+
+
+/* ==========================
+   REVIEW HEADER
+========================== */
+
+.client-review-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    margin-bottom: 18px;
+}
+
+
+.client-review-header h3 {
+    margin: 0 0 8px;
+
+    color: #33205f;
+
+    font-size: 18px;
+}
+
+
+.client-review-close {
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f5f0ff;
+
+    color: #6d28d9;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+.client-review-close:hover {
+    background: #eee5ff;
+}
+
+
+/* ==========================
+   PREVIEW
+========================== */
+
+.client-asset-preview {
+    min-height: 220px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #faf8ff;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+
+.client-preview-image {
+    max-width: 100%;
+
+    max-height: 450px;
+
+    object-fit: contain;
+}
+
+
+.client-preview-video {
+    width: 100%;
+
+    max-height: 450px;
+}
+
+
+/* ==========================
+   COMMENT
+========================== */
+
+.client-review-comment {
+    margin-top: 20px;
+}
+
+
+.client-review-comment label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #33205f;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+.client-review-comment textarea {
+    width: 100%;
+
+    min-height: 90px;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    border:
+        1px solid #e5daf7;
+
+    border-radius: 10px;
+
+    resize: vertical;
+
+    font-family: inherit;
+
+    outline: none;
+}
+
+
+.client-review-comment textarea:focus {
+    border-color: #7c3aed;
+}
+
+
+.client-comment-button {
+    margin-top: 8px;
+
+    padding: 8px 14px;
+
+    border: 1px solid #7c3aed;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #7c3aed;
+
+    cursor: pointer;
+}
+
+
+/* ==========================
+   REVIEW ACTIONS
+========================== */
+
+.client-review-actions {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.client-request-button,
+.client-approve-button {
+    flex: 1;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+}
+
+
+.client-request-button {
+    border:
+        1px solid #e6a6a6;
+
+    background: #fff7f7;
+
+    color: #c24141;
+}
+
+
+.client-approve-button {
+    border:
+        1px solid #8ac9a2;
+
+    background: #f4fbf6;
+
+    color: #27804b;
+}
+
+/* ==========================
+   CLIENT CALENDAR
+========================== */
+
+.client-calendar-page {
+    padding: 30px;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.calendar-header h1 {
+    margin: 0;
+}
+
+.calendar-header p {
+    margin-top: 6px;
+    opacity: 0.7;
+}
+
+.calendar-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.calendar-controls h2 {
+    min-width: 180px;
+    text-align: center;
+}
+
+.calendar-btn {
+    border: none;
+    padding: 9px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #eeeeee;
+}
+
+.calendar-btn:hover {
+    opacity: 0.8;
+}
+
+
+/* ==========================
+   CALENDAR LAYOUT
+========================== */
+
+.client-calendar-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.client-calendar-card,
+.client-selected-day {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+
+/* ==========================
+   WEEKDAYS
+========================== */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+/* ==========================
+   CALENDAR GRID
+========================== */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 8px;
+}
+
+.calendar-day {
+    min-height: 80px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+    border: 1px solid #eeeeee;
+}
+
+.calendar-day:hover {
+    opacity: 0.8;
+}
+
+.calendar-day.empty {
+    border: none;
+    cursor: default;
+}
+
+.calendar-day-number {
+    font-weight: bold;
+}
+
+.calendar-day.today {
+    border: 2px solid #000000;
+}
+
+.calendar-day.selected {
+    background: #eeeeee;
+}
+
+
+/* ==========================
+   EVENT DOTS
+========================== */
+
+.calendar-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+/* ==========================
+   CALENDAR EVENT DOT COLORS
+========================== */
+
+.calendar-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-left: 4px;
+    margin-top: 15px;
+}
+
+/* Content deadline */
+.dot-content {
+    background: #F59E0B;
+}
+
+/* Review deadline */
+.dot-review {
+    background: #EA580C;
+}
+
+/* Posting date */
+.dot-posting {
+    background: #7C3AED;
+}
+
+/* Campaign meeting */
+.dot-meeting {
+    background: #2563EB;
+}
+
+/* Shoot */
+.dot-shoot {
+    background: #DB2777;
+}
+
+/* Reminder */
+.dot-reminder {
+    background: #64748B;
+}
+
+/* Your note */
+.dot-note {
+    background: #16A34A;
+}
+
+
+/* ==========================
+   SELECTED DAY
+========================== */
+
+.selected-day-header {
+    margin-bottom: 20px;
+}
+
+.calendar-day-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.calendar-event {
+    border-radius: 10px;
+    padding: 14px;
+    background: #f5f5f5;
+}
+
+.calendar-event h3 {
+    margin: 6px 0;
+}
+
+.calendar-event p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.event-type {
+    font-size: 11px;
+    font-weight: bold;
+    opacity: 0.6;
+}
+
+.event-status {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    background: #ffffff;
+}
+
+.empty-calendar {
+    opacity: 0.6;
+    text-align: center;
+    padding: 20px;
+}
+
+.calendar-error {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 900px) {
+
+    .client-calendar-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .calendar-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+}
+
+/* ==========================
+   CLIENT SIDEBAR
+========================== */
+
+.client-sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #E8E3F5;
+    padding: 24px 16px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.client-sidebar-logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1E1B4B;
+    padding: 10px 14px 28px;
+}
+
+.client-sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.client-sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    background: transparent;
+    border-radius: 10px;
+    color: #6B6880;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+.client-sidebar-item:hover {
+    background: #F8F7FD;
+    color: #5B21B6;
+}
+
+.client-sidebar-item.active {
+    background: #F3ECFE;
+    color: #5B21B6;
+}
+
+.client-sidebar-bottom {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 20px;
+}
+
+/* ==========================
+   CLIENT CALENDAR PAGE
+========================== */
+
+.client-calendar-page {
+    min-height: 100vh;
+    background: #F8F7FD;
+    color: #1E1B4B;
+}
+
+
+/* PAGE HEADER */
+
+.client-page-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E8E3F5;
+    padding: 24px 40px;
+}
+
+.client-page-header h1 {
+    margin: 0;
+    font-size: 34px;
+    font-weight: 800;
+    color: #1E1B4B;
+}
+
+
+/* MAIN CONTENT */
+
+.client-calendar-content {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(400px, 1fr);
+    gap: 55px;
+    padding: 35px 40px;
+}
+
+
+/* LEFT CARD */
+
+.campaign-calendar-card,
+.selected-day-card {
+    background: #FFFFFF;
+    border: 1px solid #E8E3F5;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+.campaign-calendar-card {
+    padding: 30px;
+}
+
+.selected-day-card {
+    padding: 30px;
+    height: fit-content;
+}
+
+
+/* CARD HEADER */
+
+.campaign-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.campaign-calendar-header h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #1E1B4B;
+}
+
+.campaign-calendar-header p {
+    margin: 8px 0 0;
+    max-width: 450px;
+    color: #8B8AA0;
+    line-height: 1.5;
+}
+
+
+/* HEADER BUTTONS */
+
+.calendar-header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.calendar-today-btn,
+.calendar-add-btn {
+    min-height: 42px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.calendar-today-btn {
+    background: #FFFFFF;
+    border: 1px solid #C4B5FD;
+    color: #5B21B6;
+}
+
+.calendar-add-btn {
+    background: #7C3AED;
+    border: 1px solid #7C3AED;
+    color: #FFFFFF;
+}
+
+
+/* DIVIDER */
+
+.calendar-divider {
+    height: 1px;
+    background: #EDEAF5;
+    margin: 25px 0;
+}
+
+
+/* MONTH */
+
+.calendar-month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.calendar-month-navigation h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #1E1B4B;
+}
+
+.month-arrow-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.month-arrow-buttons button {
+    border: none;
+    background: transparent;
+    color: #8B8AA0;
+    font-size: 34px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 8px;
+}
+
+
+/* WEEKDAYS */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: #8B8AA0;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+
+/* CALENDAR GRID */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+}
+
+.calendar-day {
+    min-height: 145px;
+    border: 2px solid transparent;
+    border-radius: 16px;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.calendar-day:hover {
+    background: #FAF9FE;
+}
+
+.calendar-day.empty {
+    cursor: default;
+}
+
+.calendar-day-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #1E1B4B;
+    font-size: 20px;
+}
+
+
+/* SELECTED DAY */
+
+.calendar-day.selected {
+    background: #F3ECFE;
+    border-color: #7C3AED;
+}
+
+
+/* TODAY */
+
+.calendar-day.today
+.calendar-day-number {
+    font-weight: 800;
+}
+
+
+/* TODAY CIRCLE */
+
+.calendar-day.today .calendar-day-number {
+    background: #E9D5FF;
+    color: #5B21B6;
+}
+
+
+/* TODAY + SELECTED */
+
+.calendar-day.today.selected {
+    background: #F3ECFE;
+    border-color: #7C3AED;
+}
+
+
+/* EVENT DOTS */
+
+.calendar-dot {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    margin: 25px 3px 0;
+}
+
+
+/* LEGEND */
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #EDEAF5;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #6F6C82;
+    font-size: 13px;
+}
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+
+/* COLORS */
+
+.dot-content {
+    background: #F59E0B;
+}
+
+.dot-review {
+    background: #EA580C;
+}
+
+.dot-posting {
+    background: #7C3AED;
+}
+
+.dot-meeting {
+    background: #2563EB;
+}
+
+.dot-shoot {
+    background: #DB2777;
+}
+
+.dot-reminder {
+    background: #64748B;
+}
+
+.dot-note {
+    background: #16A34A;
+}
+
+/* ==========================
+   SELECTED DAY
+========================== */
+
+.selected-day-heading h2 {
+    margin: 0;
+    font-size: 30px;
+    color: #1E1B4B;
+}
+
+.selected-day-heading p {
+    margin: 8px 0 0;
+    color: #8B8AA0;
+    font-size: 15px;
+}
+
+
+.calendar-day-items {
+    min-height: 180px;
+}
+
+
+.calendar-empty-state {
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #8B8AA0;
+}
+
+
+.selected-day-add-btn {
+    width: 100%;
+    padding: 11px 15px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #C4B5FD;
+    color: #5B21B6;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+.selected-day-add-btn:hover,
+.calendar-today-btn:hover {
+    background: #F3ECFE;
+}
+
+/* ==========================
+   ADD NOTE MODAL
+========================== */
+
+.client-calendar-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(30, 27, 75, 0.35);
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.client-calendar-modal.show {
+    display: flex;
+}
+
+.client-calendar-modal-content {
+    width: 440px;
+    max-width: calc(100% - 30px);
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.modal-header h2 {
+    margin: 0;
+    color: #1E1B4B;
+}
+
+.modal-close-btn {
+    border: none;
+    background: transparent;
+    font-size: 26px;
+    cursor: pointer;
+    color: #8B8AA0;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.modal-form label {
+    color: #5B5870;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.modal-form input,
+.modal-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #DDD8EB;
+    border-radius: 8px;
+    padding: 11px;
+    font-family: inherit;
+}
+
+.modal-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.modal-cancel-btn,
+.modal-save-btn {
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.modal-cancel-btn {
+    background: #FFFFFF;
+    border: 1px solid #DDD8EB;
+    color: #6F6C82;
+}
+
+.modal-save-btn {
+    background: #7C3AED;
+    border: 1px solid #7C3AED;
+    color: #FFFFFF;
+}
+
+/* =========================================================
+   FINAL CLIENT WORKSPACE FIXES
+   ADD THIS AT THE VERY BOTTOM
+   DO NOT DELETE THE CSS ABOVE
+========================================================= */
+
+
+/* ==========================
+   CLIENT SIDEBAR FIX
+   ========================== */
+
+.client-sidebar {
+    width: 235px;
+    min-width: 235px;
+    height: 100vh;
+    min-height: 100vh;
+    background: #ffffff;
+    border-right: 1px solid #e6ddf7;
+    padding: 24px 15px;
+    box-sizing: border-box;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+
+/* Make sure the original navigation styling stays consistent */
+
+.client-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.client-nav-item {
+    width: 100%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: none;
+    background: transparent;
+    padding: 11px 12px;
+    border-radius: 8px;
+    color: #5b5078;
+    font-size: 13px;
+    text-align: left;
+    cursor: pointer;
+}
+
+
+/* Active navigation item */
+
+.client-nav-item.active {
+    background: #7c3aed;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* ==========================
+   MAIN CONTENT FIX
+   ========================== */
+
+.client-main {
+    margin-left: 235px;
+    min-height: 100vh;
+    padding: 0 30px 35px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================
+   CALENDAR PAGE SIZE FIX
+   ========================== */
+
+.client-calendar-page {
+    min-height: calc(100vh - 70px);
+    width: 100%;
+    max-width: 1450px;
+    background: #F8F7FD;
+    color: #1E1B4B;
+}
+
+
+/* ==========================
+   CALENDAR PAGE HEADER
+   ========================== */
+
+.client-page-header {
+    background: #FFFFFF;
+    border-bottom: 1px solid #E8E3F5;
+    padding: 20px 30px;
+}
+
+.client-page-header h1 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #1E1B4B;
+}
+
+
+/* ==========================
+   CALENDAR CONTENT
+   ========================== */
+
+.client-calendar-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.8fr);
+    gap: 28px;
+    padding: 28px 30px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================
+   CALENDAR CARDS
+   ========================== */
+
+.campaign-calendar-card,
+.selected-day-card {
+    background: #FFFFFF;
+    border: 1px solid #E8E3F5;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.campaign-calendar-card {
+    padding: 22px;
+}
+
+.selected-day-card {
+    padding: 22px;
+    height: fit-content;
+}
+
+
+/* ==========================
+   CALENDAR CARD HEADER
+   ========================== */
+
+.campaign-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.campaign-calendar-header h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #1E1B4B;
+}
+
+.campaign-calendar-header p {
+    margin: 6px 0 0;
+    max-width: 400px;
+    color: #8B8AA0;
+    line-height: 1.4;
+    font-size: 13px;
+}
+
+
+/* ==========================
+   CALENDAR BUTTONS
+   ========================== */
+
+.calendar-header-buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.calendar-today-btn,
+.calendar-add-btn {
+    min-height: 38px;
+    padding: 7px 13px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* ==========================
+   MONTH NAVIGATION
+   ========================== */
+
+.calendar-divider {
+    height: 1px;
+    background: #EDEAF5;
+    margin: 18px 0;
+}
+
+.calendar-month-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.calendar-month-navigation h3 {
+    margin: 0;
+    font-size: 23px;
+    color: #1E1B4B;
+}
+
+.month-arrow-buttons {
+    display: flex;
+    gap: 4px;
+}
+
+.month-arrow-buttons button {
+    border: none;
+    background: transparent;
+    color: #8B8AA0;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 6px;
+}
+
+
+/* ==========================
+   WEEKDAYS
+   ========================== */
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    color: #8B8AA0;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+
+/* ==========================
+   CALENDAR GRID
+   ========================== */
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-day {
+    min-height: 105px;
+    border: 2px solid transparent;
+    border-radius: 11px;
+    padding: 8px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.calendar-day:hover {
+    background: #FAF9FE;
+}
+
+.calendar-day.empty {
+    cursor: default;
+}
+
+.calendar-day-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #1E1B4B;
+    font-size: 16px;
+}
+
+
+/* ==========================
+   TODAY FIX
+   ========================== */
+
+.calendar-day.today {
+    border-color: transparent;
+}
+
+.calendar-day.today .calendar-day-number {
+    font-weight: 800;
+    background: #E9D5FF;
+    color: #5B21B6;
+}
+
+
+/* ==========================
+   SELECTED DATE
+   ========================== */
+
+.calendar-day.selected {
+    background: #F3ECFE;
+    border-color: #7C3AED;
+}
+
+.calendar-day.today.selected {
+    background: #F3ECFE;
+    border-color: #7C3AED;
+}
+
+
+/* ==========================
+   EVENT DOTS
+   ========================== */
+
+.calendar-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 18px 2px 0;
+}
+
+
+/* ==========================
+   LEGEND
+   ========================== */
+
+.calendar-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #EDEAF5;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #6F6C82;
+    font-size: 11px;
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+
+/* ==========================
+   SELECTED DAY CARD
+   ========================== */
+
+.selected-day-heading h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #1E1B4B;
+}
+
+.selected-day-heading p {
+    margin: 6px 0 0;
+    color: #8B8AA0;
+    font-size: 13px;
+}
+
+.calendar-day-items {
+    min-height: 150px;
+}
+
+.calendar-empty-state {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #8B8AA0;
+    font-size: 13px;
+}
+
+.selected-day-add-btn {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid #C4B5FD;
+    color: #5B21B6;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/* ==========================
+   ADD NOTE MODAL
+   ========================== */
+
+.client-calendar-modal-content {
+    width: 420px;
+    max-width: calc(100% - 30px);
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 22px;
+    box-sizing: border-box;
+}
+
+
+/* ==========================
+   RESPONSIVE CALENDAR
+   ========================== */
+
+@media (max-width: 1100px) {
+
+    .client-calendar-content {
+        grid-template-columns: 1fr;
+    }
+
+    .selected-day-card {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .client-sidebar {
+        width: 200px;
+        min-width: 200px;
+    }
+
+    .client-main {
+        margin-left: 200px;
+        padding: 0 20px 30px;
+    }
+
+    .client-calendar-content {
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .client-sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: auto;
+    }
+
+    .client-main {
+        margin-left: 0;
+    }
+
+    .client-calendar-content {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .campaign-calendar-header {
+        flex-direction: column;
+    }
+
+    .calendar-header-buttons {
+        width: 100%;
+    }
+
+}
+
+/* Client References */
+.client-references-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.client-reference-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    background: #ffffff;
+}
+
+.client-reference-icon {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #f3f4f6;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.client-reference-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.client-reference-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.client-reference-url {
+    font-size: 12px;
+    color: #6b7280;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.client-reference-open {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 7px;
+    background: #111827;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.client-reference-open:hover {
+    opacity: 0.85;
+}
+
+/* ==========================
+   CLIENT NOTIFICATIONS
+========================== */
+
+.client-notification-button {
+    position: relative;
+}
+
+.client-notification-dot {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 8px;
+    height: 8px;
+    background: #ef4444;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.client-notification-dot.hidden {
+    display: none;
+}
+
+.client-notification-panel {
+    position: fixed;
+    top: 72px;
+    right: 28px;
+    width: 360px;
+    max-height: 480px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+    display: none;
+    overflow: hidden;
+}
+
+.client-notification-panel.show {
+    display: block;
+}
+
+.client-notification-header {
+    padding: 16px 18px;
+    border-bottom: 1px solid #e5e7eb;
+    font-size: 15px;
+}
+
+.client-notification-list {
+    max-height: 420px;
+    overflow-y: auto;
+}
+
+.client-notification-item {
+    display: flex;
+    gap: 12px;
+    padding: 14px 16px;
+    border-bottom: 1px solid #f1f1f1;
+    cursor: pointer;
+}
+
+.client-notification-item:hover {
+    background: #f9fafb;
+}
+
+.client-notification-item.unread {
+    background: #f3f4f6;
+}
+
+.client-notification-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #f3f4f6;
+    flex-shrink: 0;
+}
+
+.client-notification-content {
+    min-width: 0;
+    flex: 1;
+}
+
+.client-notification-content strong {
+    display: block;
+    font-size: 13px;
+    color: #1f2937;
+    margin-bottom: 4px;
+}
+
+.client-notification-content p {
+    margin: 0 0 5px;
+    font-size: 12px;
+    color: #6b7280;
+    line-height: 1.4;
+}
+
+.client-notification-content small {
+    font-size: 10px;
+    color: #9ca3af;
+}
+
+.client-notification-empty {
+    padding: 30px 20px;
+    text-align: center;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.client-campaign-status,
+.client-campaign-progress {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.client-campaign-status span,
+.client-campaign-progress span {
+    min-width: 70px;
+}
+
+.client-campaign-status strong {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.client-progress-bar {
+    width: 180px;
+    height: 8px;
+    background: #e5e7eb;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+#clientCampaignProgressBar {
+    height: 100%;
+    width: 0%;
+    background: #8b5cf6;
+    border-radius: 999px;
+    transition: width 0.3s ease;
+}
+
+/* ==========================
+   ACCOUNT ACTIONS
+   ========================== */
+
+.account-actions {
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #eee9f5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#clientLogoutBtn {
+    border: none;
+    background: #f5f1fa;
+    color: #6b4f82;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+#clientLogoutBtn:hover {
+    background: #ebe2f5;
+    color: #563d6d;
+}
+
+/* ==========================
+   CLIENT ASSET COMMENTS
+========================== */
+
+.client-asset-comments-section {
+    margin: 20px 0;
+    padding: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+}
+
+.client-asset-comments-section h4 {
+    margin: 0 0 14px;
+}
+
+.client-asset-comment-item {
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.client-asset-comment-item:last-child {
+    border-bottom: none;
+}
+
+.client-asset-comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.client-asset-comment-header small {
+    color: #777;
+    font-size: 12px;
+}
+
+.client-asset-comment-item p {
+    margin: 0;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+}
+
+.client-comments-empty {
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+/* ===== Client Revision Request Panel — Purple Aesthetic ===== */
+
+#clientRevisionRequestPanel {
+    display: none;
+    margin-top: 20px;
+    padding: 24px;
+
+    background: linear-gradient(145deg, #ffffff 0%, #faf7ff 100%);
+    border: 1px solid #e5d8fa;
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(111, 66, 193, 0.08);
+    animation: revisionPanelIn 0.22s ease-out;
+}
+
+/* Panel heading */
+#clientRevisionRequestPanel h3 {
+    margin: 0 0 8px;
+    color: #4c287e;
+    font-size: 17px;
+    font-weight: 650;
+    letter-spacing: -0.2px;
+}
+
+/* Description */
+#clientRevisionRequestPanel p {
+    margin: 0 0 16px;
+    color: #78688e;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* Revision description field */
+#clientRevisionRequestText {
+    display: block;
+    width: 100%;
+    min-height: 125px;
+    padding: 13px 15px;
+    box-sizing: border-box;
+    resize: vertical;
+
+    font: inherit;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #392650;
+
+    background: #fcfaff;
+    border: 1px solid #dfd0f5;
+    border-radius: 9px;
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+#clientRevisionRequestText::placeholder {
+    color: #a99ab9;
+}
+
+#clientRevisionRequestText:hover {
+    border-color: #c9b0ed;
+}
+
+#clientRevisionRequestText:focus {
+    border-color: #9664d6;
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(150, 100, 214, 0.13);
+}
+
+/* Validation and feedback message */
+#clientRevisionRequestMessage {
+    margin-top: 9px;
+    color: #a34a78;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Panel buttons */
+#clientRevisionRequestPanel button {
+    min-height: 39px;
+    padding: 10px 17px;
+    border-radius: 8px;
+
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.15s ease;
+}
+
+/* Send revision request */
+#clientSendRevisionRequest {
+    color: #ffffff;
+    background: linear-gradient(135deg, #8754c7 0%, #7040ae 100%);
+    border: 1px solid #7040ae;
+    box-shadow: 0 3px 8px rgba(112, 64, 174, 0.16);
+}
+
+#clientSendRevisionRequest:hover {
+    background: linear-gradient(135deg, #7945b8 0%, #603294 100%);
+    box-shadow: 0 5px 12px rgba(112, 64, 174, 0.23);
+    transform: translateY(-1px);
+}
+
+#clientSendRevisionRequest:active {
+    transform: translateY(0);
+}
+
+/* Cancel button */
+#clientCancelRevisionRequest {
+    color: #72538f;
+    background: #f7f1ff;
+    border: 1px solid #e3d5f5;
+}
+
+#clientCancelRevisionRequest:hover {
+    color: #57347c;
+    background: #eee3ff;
+    border-color: #d2b9f1;
+}
+
+/* Keyboard accessibility */
+#clientRevisionRequestPanel button:focus-visible {
+    outline: 3px solid rgba(150, 100, 214, 0.3);
+    outline-offset: 2px;
+}
+
+/* Subtle entrance animation */
+@keyframes revisionPanelIn {
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+    #clientRevisionRequestPanel {
+        padding: 17px;
+        border-radius: 11px;
+    }
+
+    #clientRevisionRequestPanel button {
+        flex: 1;
+    }
+}
+
+
+
+/* ===== UPCOMING & RECENT UPDATES ===== */
+
+.client-upcoming-list,
+.client-updates-list {
+    max-height: 260px;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding: 6px 12px 6px 22px;
+    margin-top: 12px;
+
+    scrollbar-width: thin;
+    scrollbar-color: #c9b0ed #f7f1ff;
+}
+
+/* Purple scrollbar — Chrome, Edge, and Safari */
+.client-upcoming-list::-webkit-scrollbar,
+.client-updates-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.client-upcoming-list::-webkit-scrollbar-track,
+.client-updates-list::-webkit-scrollbar-track {
+    background: #f7f1ff;
+    border-radius: 10px;
+}
+
+.client-upcoming-list::-webkit-scrollbar-thumb,
+.client-updates-list::-webkit-scrollbar-thumb {
+    background: #c9b0ed;
+    border-radius: 10px;
+}
+
+.client-upcoming-list::-webkit-scrollbar-thumb:hover,
+.client-updates-list::-webkit-scrollbar-thumb:hover {
+    background: #9664d6;
+}
+
+/* Activity items */
+.client-upcoming-list .client-activity-item,
+.client-updates-list .client-activity-item {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+
+    background: #fcfaff;
+    border: 1px solid #eee4fa;
+    border-radius: 9px;
+
+    color: #4c287e;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+/* Bullet point */
+.client-upcoming-list .client-activity-item::before,
+.client-updates-list .client-activity-item::before {
+    content: "";
+    position: absolute;
+
+    left: -13px;
+    top: 17px;
+
+    width: 6px;
+    height: 6px;
+
+    background: #9664d6;
+    border-radius: 50%;
+}
+
+/* Keep empty states looking normal */
+.client-upcoming-list .client-empty-state,
+.client-updates-list .client-empty-state {
+    margin: 0;
+    padding: 12px 4px;
+    color: #9585a8;
+    font-size: 13px;
+}
+
+
+/* ==========================
+   CLIENT GUIDELINES BUTTON
+========================== */
+
+.client-guidelines-button {
+    width: 36px;
+    height: 36px;
+    border: 1px solid #d6d6d6;
+    border-radius: 50%;
+    background: white;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.client-guidelines-button:hover {
+    background: #f0f0f0;
+}
+
+/* Keep notification and guidelines buttons side by side */
+.client-header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* ==========================
+   CLIENT GUIDELINES PANEL
+========================== */
+
+.client-guidelines-panel {
+    position: absolute;
+    top: 85px;
+    right: 24px;
+    width: 340px;
+    max-width: calc(100% - 32px);
+    max-height: 75vh;
+    overflow-y: auto;
+    padding: 20px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.client-guidelines-panel[hidden] {
+    display: none;
+}
+
+.client-guidelines-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.client-guidelines-panel-header h2 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.client-guidelines-panel-header button {
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+}
+
+.client-guidelines-panel section {
+    margin-bottom: 16px;
+}
+
+.client-guidelines-panel h3 {
+    margin: 0 0 5px;
+    font-size: 14px;
+}
+
+.client-guidelines-panel p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.client-guidelines-panel .client-guidelines-note {
+    padding-top: 12px;
+    border-top: 1px solid #eee;
+}
+
+
+/* ==========================
+   CLIENT WORKSPACE GUIDELINES
+========================== */
+
+.client-guidelines-button {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: #6425e8;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(100, 37, 232, 0.15);
+}
+
+.client-guidelines-button:hover {
+    background: #5420c5;
+}
+
+.client-guidelines-panel {
+    position: absolute;
+    top: 100px;
+    right: 24px;
+    z-index: 9999;
+    width: 340px;
+    max-width: calc(100vw - 32px);
+    max-height: 65vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    padding: 16px;
+    background: #fff;
+    color: #292137;
+    border: 1px solid #f0edf7;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(40, 20, 70, 0.14);
+}
+
+.client-guidelines-panel[hidden] {
+    display: none !important;
+}
+
+/* Panel heading and subtitle */
+
+.client-guidelines-panel-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.client-guidelines-title {
+    flex: 1;
+    min-width: 0;
+}
+
+.client-guidelines-panel-header h2 {
+    margin: 0;
+    color: #302442;
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.client-guidelines-subtitle {
+    margin: 5px 0 0;
+    color: #737380;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.client-guidelines-panel-header button {
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: #9292a0;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.client-guidelines-panel-header button:hover {
+    color: #6425e8;
+}
+
+/* Individual guideline rows */
+
+.client-guideline-item {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 0;
+    border-top: 1px solid #eeeaf4;
+}
+
+.client-guideline-icon {
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    background: #f3efff;
+    border-radius: 12px;
+}
+
+.client-guideline-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: #7138e8;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.client-guideline-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.client-guideline-text h3 {
+    margin: 3px 0 5px;
+    color: #39294f;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.client-guideline-text p {
+    margin: 0;
+    color: #737380;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Note at the bottom */
+
+.client-guidelines-note {
+    margin: 10px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid #eeeaf4;
+    color: #737380;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* Smaller screens */
+
+@media (max-width: 600px) {
+    .client-guidelines-panel {
+        top: 80px;
+        right: 14px;
+        width: calc(100vw - 28px);
+        max-width: calc(100vw - 28px);
+        max-height: 70vh;
+        padding: 14px;
+    }
+
+    .client-guideline-item {
+        gap: 10px;
+    }
+
+    .client-guideline-icon {
+        flex-basis: 46px;
+        width: 46px;
+        height: 46px;
+        border-radius: 10px;
+    }
+
+    .client-guideline-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+}

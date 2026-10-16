@@ -1,0 +1,980 @@
+/* ==========================
+   FONT
+========================== */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #faf8ff;
+    color: #17133b;
+}
+
+
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.calendar-sidebar {
+
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 190px;
+    height: 100vh;
+
+    background: #F8F6FD;
+
+    border-right: 1px solid #ddd;
+
+    padding: 10px;
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+
+/* ==========================
+   MENU
+========================== */
+
+.sidebar-menu-wrapper {
+
+    position: relative;
+
+    margin-bottom: 14px;
+}
+
+
+.sidebar-menu-button {
+
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #ece3f7;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: #7c3aed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.sidebar-menu-button:hover {
+
+    background: #f1ebfa;
+}
+
+
+/* ==========================
+   PROFILE MENU
+========================== */
+
+.sidebar-account-menu {
+
+    position: absolute;
+
+    top: 42px;
+    left: 0;
+
+    width: 135px;
+
+    background: white;
+
+    border: 1px solid #ece3f7;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 8px 20px rgba(50, 30, 80, 0.12);
+
+    padding: 5px;
+
+    display: none;
+
+    z-index: 20;
+}
+
+
+.sidebar-account-menu.show {
+
+    display: block;
+}
+
+
+.account-menu-item {
+
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 6px;
+
+    padding: 8px;
+
+    text-align: left;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+
+.account-menu-item:hover {
+
+    background: #f1ebfa;
+}
+
+
+/* ==========================
+   NOTIFICATIONS
+========================== */
+
+.notification-button {
+
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #ece3f7;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: #7c3aed;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 14px;
+}
+
+
+.notification-button:hover {
+
+    background: #f1ebfa;
+}
+
+
+.notification-dot {
+
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #ef4444;
+
+    border-radius: 50%;
+
+    display: none;
+}
+
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.sidebar-navigation {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top: 0;
+}
+
+
+.sidebar-item {
+
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 7px;
+
+    padding: 8px 9px;
+
+    text-align: left;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+
+.sidebar-item:hover {
+
+    background: #f1ebfa;
+}
+
+
+.sidebar-item.active {
+
+    background: #e3d1eb;
+
+    color: #4f20a8;
+}
+
+
+.brief-sidebar-item {
+
+    margin-top: 5px;
+}
+
+.calendar-page {
+
+    min-height: 100vh;
+
+    margin-left: 190px;
+}
+
+/* =========================
+   TOP HEADER
+========================= */
+
+.calendar-header {
+    height: 68px;
+    padding: 0 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: white;
+    border-bottom: 1px solid #e5ddf5;
+}
+
+.calendar-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+/* =========================
+   MAIN LAYOUT
+========================= */
+
+.calendar-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.7fr) minmax(330px, 1fr);
+    gap: 36px;
+
+    padding: 8px 26px 30px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.calendar-card,
+.selected-day-card {
+    height: fit-content;
+    align-self: start;
+}
+
+
+/* =========================
+   CALENDAR CARD HEADER
+========================= */
+
+.calendar-card-header {
+    min-height: 112px;
+
+    padding: 28px 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #eee7f8;
+}
+
+.calendar-card-header h2 {
+    margin: 0 0 8px;
+
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.calendar-card-header p {
+    margin: 0;
+
+    color: #887fa4;
+    font-size: 16px;
+}
+
+.calendar-header-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.today-button,
+.add-note-button {
+    height: 36px;
+
+    padding: 0 13px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.today-button {
+    background: white;
+    color: #4f20a8;
+
+    border: 1px solid #d9c9ff;
+}
+
+.today-button:hover {
+    background: #f7f2ff;
+}
+
+.add-note-button {
+    background: #7435e8;
+    color: white;
+
+    border: none;
+}
+
+.add-note-button:hover {
+    background: #6427d3;
+}
+
+
+/* =========================
+   CALENDAR CONTENT
+========================= */
+
+.calendar-content {
+    padding: 40px 30px 34px;
+}
+
+.calendar-month-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 24px;
+}
+
+.calendar-month-header h2 {
+    margin: 0;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.month-navigation {
+    display: flex;
+    gap: 18px;
+}
+
+.month-navigation button {
+    width: 28px;
+    height: 28px;
+
+    border: none;
+    background: transparent;
+
+    color: #625a75;
+
+    font-size: 31px;
+    line-height: 20px;
+
+    cursor: pointer;
+}
+
+.month-navigation button:hover {
+    color: #7435e8;
+}
+
+
+/* =========================
+   WEEKDAYS
+========================= */
+
+.calendar-weekdays,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-weekdays {
+    margin-bottom: 10px;
+}
+
+.calendar-weekdays div {
+    text-align: center;
+
+    color: #7f7794;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   CALENDAR DATES
+========================= */
+
+.calendar-grid {
+    row-gap: 8px;
+}
+
+.calendar-day {
+    min-height: 108px;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+}
+
+.calendar-day:hover {
+    background: #faf6ff;
+}
+
+.calendar-day.empty {
+    cursor: default;
+}
+
+.calendar-day.empty:hover {
+    background: transparent;
+}
+
+.day-number {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 16px;
+}
+
+.calendar-day.today .day-number {
+    background: #dfd0ff;
+    color: #5d29b5;
+    font-weight: 600;
+}
+
+.calendar-day.selected {
+    border: 1.5px solid #783cff;
+    background: #f3ecff;
+}
+
+
+/* =========================
+   EVENT DOTS
+========================= */
+
+.event-dots {
+    min-height: 16px;
+
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+
+    margin-top: 4px;
+}
+
+.event-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   SELECTED DAY CARD
+========================= */
+
+.selected-day-card {
+    min-height: 305px;
+}
+
+.selected-day-header {
+    padding: 28px 30px;
+
+    border-bottom: 1px solid #eee7f8;
+}
+
+.selected-day-header h2 {
+    margin: 0 0 10px;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.selected-day-header p {
+    margin: 0;
+
+    color: #948aa8;
+    font-size: 16px;
+}
+
+
+/* =========================
+   SELECTED DAY ITEMS
+========================= */
+
+.selected-day-items {
+    padding: 18px 30px 8px;
+}
+
+.calendar-item {
+    padding: 18px 0;
+
+    display: grid;
+    grid-template-columns: 12px 1fr auto;
+    gap: 12px;
+
+    border-bottom: 1px solid #eee7f8;
+}
+
+.calendar-item:last-child {
+    border-bottom: none;
+}
+
+.item-dot {
+    width: 9px;
+    height: 9px;
+
+    margin-top: 6px;
+
+    border-radius: 50%;
+}
+
+.item-name {
+    font-size: 17px;
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+.item-info {
+    color: #8b829f;
+    font-size: 14px;
+}
+
+.open-item-button {
+    border: none;
+    background: transparent;
+
+    color: #7435e8;
+
+    font-size: 16px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.open-item-button:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================
+   NO ITEMS
+========================= */
+
+.no-items {
+    padding: 25px 0;
+
+    text-align: center;
+
+    color: #968ca7;
+    font-size: 15px;
+}
+
+
+/* =========================
+   ADD NOTE
+========================= */
+
+.add-day-note-button {
+    width: fit-content;
+
+    margin: 10px 30px 20px;
+
+    padding: 0 18px;
+
+    height: 38px;
+
+    border-radius: 8px;
+
+    border: 1px solid #d9c9ff;
+
+    background: white;
+
+    color: #5e28b3;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.add-day-note-button:hover {
+    background: #f8f3ff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .calendar-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .selected-day-card {
+        min-height: auto;
+    }
+}
+
+
+@media (max-width: 650px) {
+
+    .calendar-header {
+        padding: 0 16px;
+    }
+
+    .calendar-layout {
+        padding: 8px 12px 20px;
+    }
+
+    .calendar-card-header {
+        padding: 22px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .calendar-content {
+        padding: 25px 15px;
+    }
+
+    .calendar-day {
+        min-height: 75px;
+        padding: 5px;
+    }
+
+    .selected-day-header,
+    .selected-day-items {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .add-day-note-button {
+        width: calc(100% - 40px);
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+.calendar-card,
+.selected-day-card {
+    background: white;
+    border: 1px solid #eee7f8;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* ==========================
+   NOTE MODAL
+========================== */
+
+.note-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(25, 15, 45, 0.35);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+
+.note-modal.show {
+
+    display: flex;
+}
+
+
+.note-modal-content {
+
+    width: min(450px, calc(100% - 30px));
+
+    background: white;
+
+    border-radius: 16px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(40, 20, 70, 0.18);
+}
+
+
+.note-modal-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.note-modal-header h2 {
+
+    margin: 0;
+
+    font-size: 20px;
+}
+
+
+.close-note-button {
+
+    width: 32px;
+    height: 32px;
+
+    border: none;
+
+    background: transparent;
+
+    font-size: 26px;
+
+    color: #777;
+
+    cursor: pointer;
+}
+
+
+.note-modal-content label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #3b3150;
+}
+
+
+.note-modal-content input,
+.note-modal-content textarea {
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin-bottom: 16px;
+
+    border: 1px solid #ddd3ee;
+
+    border-radius: 8px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+.note-modal-content input:focus,
+.note-modal-content textarea:focus {
+
+    border-color: #7c3aed;
+}
+
+
+.note-modal-content textarea {
+
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+
+.note-message {
+
+    min-height: 18px;
+
+    margin: -5px 0 12px;
+
+    color: #c0392b;
+
+    font-size: 13px;
+}
+
+
+.note-modal-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+}
+
+
+.cancel-note-button,
+.save-note-button {
+
+    height: 38px;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.cancel-note-button {
+
+    background: white;
+
+    border: 1px solid #ddd3ee;
+
+    color: #555;
+}
+
+
+.save-note-button {
+
+    background: #7435e8;
+
+    border: none;
+
+    color: white;
+}
+
+
+/* ==========================
+   SIDEBAR FONT
+========================== */
+
+.sidebar-item {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.sidebar-item.active {
+    font-weight: 600;
+}
+
+
+/* Account menu */
+
+.account-menu-item {
+    font-family: Inter, Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+
+/* Menu button */
+
+.sidebar-menu-button {
+    font-family: Inter, Arial, sans-serif;
+}
+
+
+/* Notification */
+
+.notification-button {
+    font-family: Inter, Arial, sans-serif;
+}

@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #f5f3f8;
+
+    color: #222;
+}
+
+
+/* PAGE */
+
+.enter-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+/* CARD */
+
+.enter-card {
+    width: 100%;
+    max-width: 560px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* TEXT */
+
+.enter-eyebrow {
+    margin: 0 0 8px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+
+    color: #8b5cf6;
+}
+
+.enter-card h1 {
+    margin: 0 0 10px;
+
+    font-size: 30px;
+}
+
+.enter-description {
+    margin: 0 0 28px;
+
+    color: #777;
+
+    line-height: 1.5;
+}
+
+
+/* OPTIONS */
+
+.enter-options {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.enter-option {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    padding: 18px;
+
+    background: #fff;
+
+    border: 1px solid #ddd;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.enter-option:hover {
+    border-color: #8b5cf6;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 18px rgba(139, 92, 246, 0.12);
+}
+
+
+/* ICON */
+
+.enter-icon {
+    width: 48px;
+
+    height: 48px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #8b5cf6;
+
+    color: #fff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* OPTION TEXT */
+
+.enter-option-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.enter-option-text strong {
+    font-size: 16px;
+
+    color: #222;
+}
+
+.enter-option-text span {
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    color: #777;
+}
+
+
+/* ERROR */
+
+.enter-error {
+    margin: 16px 0 0;
+
+    color: #d33;
+
+    font-size: 13px;
+
+    text-align: center;
+}

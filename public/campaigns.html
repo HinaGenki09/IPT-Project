@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Campaigns</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/campaigns.css"
+    >
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- SIDEBAR -->
+
+        <aside
+            class="sidebar"
+            id="sidebar"
+        >
+
+            <div class="sidebar-header">
+
+                <div class="sidebar-logo">
+                    C
+                </div>
+
+                <div>
+                    <strong>Campaigns</strong>
+                    <small>Content Creator</small>
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <button
+                class="sidebar-item"
+                id="profileButton"
+            >
+
+                <span class="sidebar-icon">
+                    👤
+                </span>
+
+                <span>
+                    Profile
+                </span>
+
+            </button>
+
+
+            <!-- AUDIT LOGS -->
+
+            <button
+                class="sidebar-item"
+                id="auditLogsButton"
+            >
+
+                <span class="sidebar-icon">
+                    📋
+                </span>
+
+                <span>
+                    Audit Logs
+                </span>
+
+            </button>
+
+
+            <div class="sidebar-spacer"></div>
+
+
+            <!-- LOGOUT -->
+
+            <button
+                class="sidebar-item logout-item"
+                id="logoutButton"
+            >
+
+                <span class="sidebar-icon">
+                    ↪
+                </span>
+
+                <span>
+                    Log Out
+                </span>
+
+            </button>
+
+        </aside>
+
+
+        <!-- PROFILE PANEL -->
+
+        <div
+            class="profile-panel"
+            id="profilePanel"
+        >
+
+            <div class="profile-panel-header">
+
+                <div class="profile-avatar">
+                    👤
+                </div>
+
+                <div>
+
+                    <strong id="profileUsername">
+                        Username
+                    </strong>
+
+                    <small id="profileEmail">
+                        email@example.com
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <div class="profile-detail">
+
+                    <span>
+                        Username
+                    </span>
+
+                    <strong id="profileUsernameDetail">
+                        Username
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong id="profileEmailDetail">
+                        email@example.com
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-detail">
+
+                    <span>
+                        Account Type
+                    </span>
+
+                    <strong
+                        id="profileAccountType"
+                        class="account-type"
+                    >
+                        Content Creator
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="close-panel-button"
+                id="closeProfilePanel"
+            >
+                Close
+            </button>
+
+        </div>
+
+
+        <!-- AUDIT LOGS PANEL -->
+
+        <div
+            class="audit-panel"
+            id="auditPanel"
+        >
+
+            <div class="audit-panel-header">
+
+                <div>
+
+                    <span class="panel-eyebrow">
+                        ACTIVITY
+                    </span>
+
+                    <h2>
+                        Audit Logs
+                    </h2>
+
+                </div>
+
+                <button
+                    class="panel-close"
+                    id="closeAuditPanel"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <p class="audit-description">
+                Recent activity related to your campaigns.
+            </p>
+
+
+            <div
+                id="auditLogList"
+                class="audit-log-list"
+            >
+
+                <p class="audit-empty">
+                    Loading activity...
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- MAIN -->
+
+        <main class="campaign-main">
+
+            <!-- TOP BAR -->
+
+            <header class="top-bar">
+
+                <div>
+
+                    <span class="page-eyebrow">
+                        CONTENT CREATOR
+                    </span>
+
+                    <h1>
+                        Campaigns
+                    </h1>
+
+                    <p>
+                        Manage and organize your active campaigns.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="menu-button"
+                    id="menuButton"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </header>
+
+
+            <!-- CONTENT -->
+
+            <section class="campaign-content">
+
+
+                <!-- SEARCH + CREATE -->
+
+                <div class="campaign-toolbar">
+
+                    <div class="search-wrapper">
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <input
+                            type="text"
+                            id="searchCampaign"
+                            class="search-bar"
+                            placeholder="Search campaigns..."
+                        >
+
+                    </div>
+
+
+                    <button
+                        class="new-campaign-button"
+                        id="newCampaignButton"
+                    >
+
+                        <span>+</span>
+
+                        New campaign
+
+                    </button>
+
+                </div>
+
+
+                <!-- CAMPAIGN SECTION -->
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <h2>
+                            Your Campaigns
+                        </h2>
+
+                        <p>
+                            Select a campaign to open its workspace.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAMPAIGNS -->
+
+                <div
+                    class="campaign-grid"
+                    id="campaignGrid"
+                >
+
+                    <!-- Campaign cards appear here -->
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- NEW CAMPAIGN MODAL -->
+
+        <div
+            class="modal"
+            id="campaignModal"
+        >
+
+            <div class="modal-content">
+
+                <button
+                    class="close-button"
+                    id="closeModal"
+                >
+                    ×
+                </button>
+
+
+                <div class="modal-heading">
+
+                    <span>
+                        CAMPAIGN
+                    </span>
+
+                    <h2>
+                        New Campaign
+                    </h2>
+
+                    <p>
+                        Set up the basic details for your campaign.
+                    </p>
+
+                </div>
+
+
+                <form id="campaignForm">
+
+
+                    <label>
+                        Campaign Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="campaignName"
+                        placeholder="Campaign Name"
+                        required
+                    >
+
+
+                    <label>
+                        Brief Description
+                    </label>
+
+                    <textarea
+                        id="campaignDescription"
+                        placeholder="Briefly describe the campaign"
+                        rows="3"
+                    ></textarea>
+
+
+                    <div class="date-row">
+
+                        <div>
+
+                            <label>
+                                Start Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="startDate"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div>
+
+                            <label>
+                                End Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="endDate"
+                                required
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <label>
+                        Campaign Picture URL
+                    </label>
+
+                    <input
+                        type="url"
+                        id="campaignImage"
+                        placeholder="https://example.com/image.jpg"
+                    >
+
+
+                    <!-- PEOPLE WITH ACCESS -->
+
+                    <div
+                        id="accessSection"
+                        class="access-section"
+                    >
+
+                        <div class="form-section-heading">
+
+                            <strong>
+                                People with Access
+                            </strong>
+
+                            <span>
+                                Add clients or collaborators.
+                            </span>
+
+                        </div>
+
+
+                        <!-- CLIENT -->
+
+                        <div class="member-add-group">
+
+                            <label for="clientSelect">
+                                Client
+                            </label>
+
+                            <select id="clientSelect">
+
+                                <option value="">
+                                    Select Client
+                                </option>
+
+                            </select>
+
+                            <button
+                                type="button"
+                                id="addClientButton"
+                                class="add-member-button"
+                            >
+                                + Add Client
+                            </button>
+
+                        </div>
+
+
+                        <!-- COLLABORATOR -->
+
+                        <div class="member-add-group">
+
+                            <label for="collaboratorSelect">
+                                Collaborator (CC)
+                            </label>
+
+                            <select id="collaboratorSelect">
+
+                                <option value="">
+                                    Select Collaborator (CC)
+                                </option>
+
+                            </select>
+
+                            <button
+                                type="button"
+                                id="addCollaboratorButton"
+                                class="add-member-button"
+                            >
+                                + Add Collaborator
+                            </button>
+
+                        </div>
+
+
+                        <!-- CURRENT MEMBERS -->
+
+                        <div
+                            id="campaignMembers"
+                            class="campaign-members"
+                        >
+
+                            <p class="no-members">
+                                No people added yet.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="create-button"
+                    >
+                        Create Campaign
+                    </button>
+
+
+                    <p
+                        id="campaignMessage"
+                        class="campaign-message"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/campaigns.js"></script>
+
+</body>
+
+</html>

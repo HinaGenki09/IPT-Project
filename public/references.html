@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>References</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/references.css"
+    >
+
+</head>
+
+<body>
+
+
+    <!-- ==========================
+     SIDEBAR
+=========================== -->
+
+<aside class="references-sidebar">
+
+    <div class="sidebar-menu-wrapper">
+
+        <button
+            class="sidebar-menu-button"
+            id="sidebarMenuButton"
+        >
+            ☰
+        </button>
+
+        <div
+            class="sidebar-account-menu"
+            id="sidebarAccountMenu"
+        >
+
+            <button
+                class="account-menu-item"
+                id="profileMenuButton"
+            >
+                👤
+                <span>Profile</span>
+            </button>
+
+            <button
+                class="account-menu-item"
+                id="logoutMenuButton"
+            >
+                ↪
+                <span>Log Out</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <button
+        class="notification-button"
+        id="notificationButton"
+    >
+        🔔
+
+        <span
+            class="notification-dot"
+            id="notificationDot"
+        ></span>
+
+    </button>
+
+
+    <nav class="sidebar-navigation">
+
+        <button
+            class="sidebar-item"
+            id="homeButton"
+        >
+            🏠
+            <span>Dashboard</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            id="calendarSidebarButton"
+        >
+            🗓
+            <span>Calendar</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            id="assetSidebarButton"
+        >
+            📁
+            <span>Asset Library</span>
+        </button>
+
+
+        <button
+            class="sidebar-item brief-sidebar-item"
+            id="briefSidebarButton"
+        >
+            📝
+            <span>Brief</span>
+        </button>
+
+
+        <button
+            class="sidebar-item active"
+            id="referencesSidebarButton"
+        >
+            🔗
+            <span>References</span>
+        </button>
+
+    </nav>
+
+</aside>
+
+
+    <!-- ==========================
+         MAIN PAGE
+    =========================== -->
+
+    <div class="references-page">
+
+
+        <!-- TOP HEADER -->
+
+        <header class="references-header">
+
+            <h1>
+                References
+            </h1>
+
+        </header>
+
+
+
+        <!-- ==========================
+             MAIN CONTENT
+        =========================== -->
+
+        <main class="references-main">
+
+
+            <section class="references-card">
+
+
+                <!-- CARD HEADER -->
+
+                <div class="references-card-header">
+
+                    <div>
+
+                        <h2>
+                            Campaign References
+                        </h2>
+
+                        <p>
+                            Links to designs, photos and layouts (no file uploads needed)
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        id="addLinkButton"
+                        class="add-link-button"
+                    >
+                        <span>+</span>
+                        Add Link
+                    </button>
+
+                </div>
+
+
+
+                <!-- REFERENCES LIST -->
+
+                <div
+                    id="referencesList"
+                    class="references-list"
+                >
+                </div>
+
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ==========================
+         ADD LINK MODAL
+    =========================== -->
+
+    <div
+        id="linkModal"
+        class="link-modal"
+    >
+
+        <div class="link-modal-content">
+
+
+            <div class="link-modal-header">
+
+                <h2>
+                    Add Reference
+                </h2>
+
+                <button
+                    id="closeLinkModal"
+                    class="close-link-button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <label for="referenceTitle">
+                Title
+            </label>
+
+            <input
+                type="text"
+                id="referenceTitle"
+                placeholder="e.g. Canva - Campaign Design"
+            >
+
+
+            <label for="referenceUrl">
+                URL
+            </label>
+
+            <input
+                type="url"
+                id="referenceUrl"
+                placeholder="https://example.com/"
+            >
+
+
+            <p
+                id="referenceMessage"
+                class="reference-message"
+            ></p>
+
+
+            <div class="link-modal-actions">
+
+                <button
+                    id="cancelLinkButton"
+                    class="cancel-link-button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="saveLinkButton"
+                    class="save-link-button"
+                >
+                    Save Link
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/references.js"></script>
+
+</body>
+
+</html>

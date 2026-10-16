@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Asset Review</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/asset-review.css">
+</head>
+
+<body>
+
+    <!-- ==========================
+         HEADER
+    =========================== -->
+
+    <header class="review-header">
+
+        <button id="backButton" class="back-button">
+            ←
+        </button>
+
+        <div class="header-info">
+            <h1 id="campaignName">Asset Review</h1>
+
+            <p id="campaignDescription">
+                Review and manage campaign asset
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- ==========================
+         MAIN CONTENT
+    =========================== -->
+
+    <main class="review-container">
+
+        <!-- ==========================
+             ASSET PREVIEW
+        =========================== -->
+
+        <section class="asset-preview-section">
+
+            <div class="preview-header">
+
+                <div>
+                    <span class="section-label">
+                        ASSET REVIEW
+                    </span>
+
+                    <h2 id="assetName">
+                        Loading asset...
+                    </h2>
+
+                    <p id="assetDescription">
+                        Loading description...
+                    </p>
+                </div>
+
+                <span id="assetStatus" class="asset-status">
+                    Pending Review
+                </span>
+
+            </div>
+
+
+            <div class="asset-preview-layout">
+
+                <img
+                    id="assetImage"
+                    src=""
+                    alt="Asset Preview"
+                >
+
+                <div id="filePreview"></div>
+
+            </div>
+
+
+            <!-- ==========================
+                 ASSET DETAILS
+            =========================== -->
+
+            <div class="asset-details">
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        Version
+                    </span>
+
+                    <strong id="assetVersion">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        Uploaded By
+                    </span>
+
+                    <strong id="uploadedBy">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="detail-item">
+
+                    <span class="detail-label">
+                        Status
+                    </span>
+
+                    <strong id="assetStatusDetails">
+                        Pending Review
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             COMMENTS
+        =========================== -->
+
+        <section class="review-section comments-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        DISCUSSION
+                    </span>
+
+                    <h2>
+                        Comments
+                    </h2>
+
+                    <p>
+                        Share feedback, updates, or questions about this asset.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="commentsList" class="comments-list">
+
+                <div class="empty-comments">
+                    No comments yet.
+                </div>
+
+            </div>
+
+
+            <div class="comment-form">
+
+                <textarea
+                    id="commentInput"
+                    placeholder="Write a comment..."
+                    rows="3"></textarea>
+
+
+                <div class="comment-form-bottom">
+
+                    <p
+                        id="commentMessage"
+                        class="form-message">
+                    </p>
+
+                    <button
+                        id="commentButton"
+                        class="primary-button">
+                        Add Comment
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             REVISION SUBMISSION
+        =========================== -->
+
+        <section
+            id="revisionSubmitSection"
+            class="review-section revision-submit-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        CONTENT CREATOR
+                    </span>
+
+                    <h2>
+                        Submit New Revision
+                    </h2>
+
+                    <p>
+                        Upload a new version of this asset after receiving feedback.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="revision-form">
+
+                <div class="form-group">
+
+                    <label for="revisionFileUrl">
+                        File URL
+                    </label>
+
+                    <input
+                        type="text"
+                        id="revisionFileUrl"
+                        placeholder="Paste the updated file URL">
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="revisionNotes">
+                        Revision Notes
+                    </label>
+
+                    <textarea
+                        id="revisionNotes"
+                        rows="4"
+                        placeholder="Describe what was changed..."></textarea>
+
+                </div>
+
+
+                <div class="revision-form-bottom">
+
+                    <p
+                        id="revisionMessage"
+                        class="form-message">
+                    </p>
+
+                    <button
+                        id="submitRevisionButton"
+                        class="primary-button">
+                        Submit Revision
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==========================
+             REVISION HISTORY
+        =========================== -->
+
+        <section class="review-section revision-history-section">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-label">
+                        VERSION HISTORY
+                    </span>
+
+                    <h2>
+                        Revision History
+                    </h2>
+
+                    <p>
+                        View previous versions submitted for this asset.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="revisionList"
+                class="revision-list">
+
+                <div class="empty-revisions">
+                    No revision history available.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="js/asset-review.js"></script>
+
+</body>
+
+</html>

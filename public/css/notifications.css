@@ -1,0 +1,494 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #222;
+}
+
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.notifications-sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 155px;
+    height: 100vh;
+
+    background: #F8F6FD;
+
+    border-right: 1px solid #ddd;
+
+    padding: 10px;
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+
+/* ==========================
+   MENU
+========================== */
+
+.sidebar-menu-wrapper {
+    position: relative;
+
+    margin-bottom: 14px;
+}
+
+.sidebar-menu-button {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #ece3f7;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: #7c3aed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-menu-button:hover {
+    background: #f1ebfa;
+}
+
+
+/* ==========================
+   ACCOUNT MENU
+========================== */
+
+.sidebar-account-menu {
+    position: absolute;
+
+    top: 42px;
+    left: 0;
+
+    width: 135px;
+
+    background: #ffffff;
+
+    border: 1px solid #ece3f7;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(50, 30, 80, 0.12);
+
+    padding: 5px;
+
+    display: none;
+
+    z-index: 20;
+}
+
+.sidebar-account-menu.show {
+    display: block;
+}
+
+.account-menu-item {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 6px;
+
+    padding: 8px;
+
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+.account-menu-item:hover {
+    background: #f1ebfa;
+}
+
+
+/* ==========================
+   NOTIFICATION BUTTON
+========================== */
+
+.notification-button {
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #ece3f7;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: #7c3aed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 14px;
+}
+
+.notification-button:hover {
+    background: #f1ebfa;
+}
+
+.notification-button.active {
+    background: #e3d1eb;
+
+    color: #4f20a8;
+}
+
+
+/* ==========================
+   NOTIFICATION DOT
+========================== */
+
+.notification-dot {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #ef4444;
+
+    border-radius: 50%;
+
+    display: none;
+}
+
+
+/* ==========================
+   NAVIGATION
+========================== */
+
+.sidebar-navigation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top: 0;
+}
+
+.sidebar-item {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 7px;
+
+    padding: 8px 9px;
+
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+.sidebar-item:hover {
+    background: #f1ebfa;
+}
+
+.sidebar-item.active {
+    background: #e3d1eb;
+
+    color: #4f20a8;
+
+    font-weight: 600;
+}
+
+.brief-sidebar-item {
+    margin-top: 5px;
+}
+
+
+/* ==========================
+   PAGE
+========================== */
+
+.notifications-page {
+    margin-left: 155px;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    overflow-y: auto;
+
+    background: #f8f7fb;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.notifications-header {
+    min-height: 82px;
+
+    padding: 0 28px;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #eeeaf5;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.notifications-header h1 {
+    margin: 0;
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    color: #1e1b4b;
+}
+
+.notifications-header p {
+    margin: 5px 0 0;
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+.unread-count {
+    padding: 5px 13px;
+
+    border-radius: 20px;
+
+    background: #e4d5ef;
+
+    color: #5d3478;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================
+   MAIN CONTENT
+========================== */
+
+.notification-filters {
+    display: flex;
+
+    gap: 8px;
+
+    padding: 24px 28px 12px;
+}
+
+.filter-button {
+    border: none;
+
+    border-radius: 15px;
+
+    padding: 7px 16px;
+
+    background: #a17ab7;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 12px;
+}
+
+.filter-button:hover {
+    background: #8e65a6;
+}
+
+.filter-button.active {
+    background: #7d4c9b;
+}
+
+
+/* ==========================
+   NOTIFICATION LIST
+========================== */
+
+.notification-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 0 28px 40px;
+}
+
+.notification-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 16px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeaf5;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        transform 0.15s ease;
+}
+
+.notification-item:hover {
+    background: #faf8fd;
+
+    transform: translateY(-1px);
+}
+
+.notification-item.unread {
+    background: #eee3f5;
+
+    border-color: #dfcdea;
+}
+
+
+/* ==========================
+   ICON
+========================== */
+
+.notification-icon {
+    width: 40px;
+    height: 40px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #dcc9e8;
+
+    font-size: 17px;
+}
+
+
+/* ==========================
+   CONTENT
+========================== */
+
+.notification-content {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.notification-content strong {
+    display: block;
+
+    color: #6f3c91;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.notification-content p {
+    margin: 0;
+
+    font-size: 12px;
+
+    color: #625b6b;
+
+    line-height: 1.5;
+}
+
+
+/* ==========================
+   TIME
+========================== */
+
+.notification-time {
+    font-size: 11px;
+
+    color: #999;
+
+    white-space: nowrap;
+}
+
+
+/* ==========================
+   EMPTY / LOADING
+========================== */
+
+.loading-message,
+.empty-message {
+    padding: 20px;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+}

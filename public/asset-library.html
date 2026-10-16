@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Asset Library</title>
+
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="css/asset-library.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         SIDEBAR
+    =========================== -->
+
+    <aside class="asset-sidebar">
+
+        <div class="sidebar-menu-wrapper">
+
+            <button
+                class="sidebar-menu-button"
+                id="sidebarMenuButton"
+            >
+                ☰
+            </button>
+
+            <div
+                class="sidebar-account-menu"
+                id="sidebarAccountMenu"
+            >
+
+                <button
+                    class="account-menu-item"
+                    id="profileMenuButton"
+                >
+                    👤
+                    <span>Profile</span>
+                </button>
+
+                <button
+                    class="account-menu-item"
+                    id="logoutMenuButton"
+                >
+                    ↪
+                    <span>Log Out</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="notification-button"
+            id="notificationButton"
+        >
+            🔔
+            <span
+                class="notification-dot"
+                id="notificationDot"
+            ></span>
+        </button>
+
+
+        <nav class="sidebar-navigation">
+
+            <button
+                class="sidebar-item"
+                id="homeButton"
+            >
+                🏠
+                <span>Dashboard</span>
+            </button>
+
+            <button
+                class="sidebar-item"
+                id="calendarSidebarButton"
+            >
+                🗓
+                <span>Calendar</span>
+            </button>
+
+            <button
+                class="sidebar-item active"
+                id="assetSidebarButton"
+            >
+                📁
+                <span>Asset Library</span>
+            </button>
+
+            <button
+                class="sidebar-item"
+                id="briefSidebarButton"
+            >
+                📝
+                <span>Brief</span>
+            </button>
+
+            <button
+                class="sidebar-item"
+                id="referencesSidebarButton"
+            >
+                🔗
+                <span>References</span>
+            </button>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ==========================
+         HEADER
+    =========================== -->
+
+    <header class="asset-header">
+
+        <button
+            id="backButton"
+            class="back-button"
+        >
+            ←
+        </button>
+
+        <div>
+
+            <h1 id="campaignName">
+                Asset Library
+            </h1>
+
+            <p id="campaignDescription">
+                Manage campaign assets and files.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==========================
+         MAIN CONTENT
+    =========================== -->
+
+    <main class="asset-container">
+
+        <div class="asset-top">
+
+            <div>
+
+                <h2>
+                    Assets
+                </h2>
+
+                <p id="assetCount">
+                    0 assets
+                </p>
+
+            </div>
+
+            <button
+                id="uploadAssetButton"
+                class="upload-button"
+            >
+                + Upload Asset
+            </button>
+
+        </div>
+
+
+        <!-- ==========================
+             ASSET GRID
+        =========================== -->
+
+        <section
+            id="assetGrid"
+            class="asset-grid"
+        >
+
+            <p class="empty-message">
+                No assets yet.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================
+         UPLOAD MODAL
+    =========================== -->
+
+    <div
+        id="assetModal"
+        class="modal"
+    >
+
+        <div class="modal-content">
+
+            <button
+                id="closeAssetModal"
+                class="close-button"
+            >
+                ×
+            </button>
+
+            <h2>
+                Upload Asset
+            </h2>
+
+
+            <label>
+                Asset Name
+            </label>
+
+            <input
+                type="text"
+                id="assetName"
+                placeholder="Enter asset name"
+            >
+
+
+            <label>
+                Description
+            </label>
+
+            <textarea
+                id="assetDescription"
+                placeholder="Enter asset description"
+            ></textarea>
+
+
+            <label>
+                File URL
+            </label>
+
+            <input
+                type="text"
+                id="assetFileUrl"
+                placeholder="Paste image or file URL"
+            >
+
+
+            <label>
+                File Type
+            </label>
+
+            <select id="assetFileType">
+
+                <option value="">
+                    Select file type
+                </option>
+
+                <option value="Image">
+                    Image
+                </option>
+
+                <option value="Video">
+                    Video
+                </option>
+
+                <option value="Document">
+                    Document
+                </option>
+
+                <option value="Other">
+                    Other
+                </option>
+
+            </select>
+
+
+            <p
+                id="assetMessage"
+                class="asset-message"
+            ></p>
+
+
+            <button
+                id="saveAssetButton"
+                class="save-button"
+            >
+                Upload Asset
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/asset-library.js"></script>
+
+</body>
+
+</html>

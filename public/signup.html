@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Sign Up</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/signup.css"
+    >
+</head>
+
+<body>
+
+    <div class="signup-container">
+
+        <!-- LEFT SIDE -->
+        <div class="signup-left">
+
+            <div class="company-name">
+                <span class="logo-icon">■</span>
+                <span>GC-KA SOHO</span>
+            </div>
+
+            <div class="signup-content">
+
+                <h1>Sign Up</h1>
+
+                <p class="subtitle">
+                    Create an account or
+                    <a href="/login.html">Sign In</a>
+                </p>
+
+                <form id="signupForm">
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Email Address"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="Username"
+                        required
+                    >
+
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Password (8 minimum)"
+                        minlength="8"
+                        required
+                    >
+
+                
+
+                    <button type="submit">
+                        Sign Up
+                    </button>
+
+                    <p id="signupMessage"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT SIDE -->
+        <div class="signup-right">
+
+            <img
+                src="/images/login-bg.jpg"
+                alt="Purple flowers"
+            >
+
+        </div>
+
+    </div>
+
+    <script src="/js/signup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,735 @@
+/* ==========================
+   GLOBAL
+========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #f6f5f8;
+    color: #302642;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.review-header {
+    height: 82px;
+    background: #ffffff;
+    border-bottom: 1px solid #ebe7f0;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 40px;
+
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+
+.back-button {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #e5dff0;
+    border-radius: 9px;
+
+    background: #ffffff;
+    color: #6d28d9;
+
+    font-size: 19px;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 16px;
+
+    transition: 0.2s ease;
+}
+
+.back-button:hover {
+    background: #f4effa;
+    border-color: #d8c9ec;
+}
+
+
+.header-info h1 {
+    margin: 0;
+
+    font-size: 19px;
+    font-weight: 600;
+
+    color: #302642;
+}
+
+.header-info p {
+    margin: 4px 0 0;
+
+    font-size: 12px;
+    color: #7b7286;
+}
+
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.review-container {
+    width: min(1120px, calc(100% - 48px));
+
+    margin: 30px auto 60px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* ==========================
+   GENERAL SECTION
+========================== */
+
+.asset-preview-section,
+.review-section {
+    background: #ffffff;
+
+    border: 1px solid #ebe7f0;
+    border-radius: 14px;
+
+    box-shadow: 0 3px 12px rgba(55, 35, 80, 0.04);
+}
+
+
+/* ==========================
+   ASSET PREVIEW
+========================== */
+
+.asset-preview-section {
+    padding: 25px;
+}
+
+
+.preview-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 22px;
+}
+
+
+.section-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    color: #8b5cf6;
+}
+
+
+.preview-header h2,
+.section-heading h2 {
+    margin: 0;
+
+    color: #302642;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+
+.preview-header p,
+.section-heading p {
+    margin: 6px 0 0;
+
+    color: #777080;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ==========================
+   STATUS
+========================== */
+
+.asset-status {
+    flex-shrink: 0;
+
+    display: inline-flex;
+    align-items: center;
+
+    width: fit-content;
+
+    padding: 6px 11px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+}
+
+
+/* Pending Review */
+
+.status-pending {
+    background: #fff4d6;
+    color: #9a6700;
+    border: 1px solid #f3d98b;
+}
+
+
+/* Reviewed */
+
+.status-reviewed {
+    background: #e8f1ff;
+    color: #315ea8;
+    border: 1px solid #bcd3f7;
+}
+
+
+/* Approved */
+
+.status-approved {
+    background: #e6f7ed;
+    color: #287a4b;
+    border: 1px solid #b9e4ca;
+}
+
+
+/* Revision Requested */
+
+.status-revision {
+    background: #fce8f3;
+    color: #a13d70;
+    border: 1px solid #efc1d8;
+}
+
+
+/* ==========================
+   PREVIEW LAYOUT
+========================== */
+
+.asset-preview-layout {
+    width: 100%;
+
+    min-height: 390px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background: #ffffff;
+}
+
+
+/* ==========================
+   ACTUAL IMAGE
+========================== */
+
+#assetImage {
+    display: block;
+
+    max-width: 100%;
+    max-height: 500px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+
+/* ==========================
+   NON-IMAGE FILE
+========================== */
+
+#filePreview {
+    display: none;
+
+    width: 100%;
+    min-height: 390px;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+
+#filePreview a {
+    color: #6d28d9;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+#filePreview a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================
+   ASSET DETAILS
+========================== */
+
+.asset-details {
+    border-top: 1px solid #eeeaf3;
+
+    margin-top: 22px;
+    padding-top: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+}
+
+
+.detail-item {
+    padding: 15px 0;
+
+    border-bottom: 1px solid #eeeaf3;
+}
+
+
+.detail-item:last-child {
+    border-bottom: none;
+}
+
+
+.detail-label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #928a9b;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+
+.detail-item strong {
+    display: block;
+
+    color: #3a3148;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+/* ==========================
+   REVIEW SECTIONS
+========================== */
+
+.review-section {
+    padding: 24px 25px;
+}
+
+
+.section-heading {
+    margin-bottom: 20px;
+}
+
+
+/* ==========================
+   COMMENTS
+========================== */
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+/* Matches JS */
+
+.comment {
+    padding: 13px 15px;
+
+    background: #faf9fc;
+
+    border: 1px solid #eeeaf3;
+    border-radius: 10px;
+}
+
+
+.comment-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 8px;
+}
+
+
+.comment-user {
+    color: #3b304b;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.comment-date {
+    color: #978fa2;
+
+    font-size: 10px;
+}
+
+
+.comment-text {
+    margin: 0;
+
+    color: #51485c;
+
+    font-size: 12px;
+    line-height: 1.55;
+
+    white-space: pre-wrap;
+}
+
+
+.empty-comments,
+.empty-revisions {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #968ea0;
+
+    font-size: 12px;
+
+    border: 1px dashed #ddd6e7;
+    border-radius: 10px;
+
+    background: #fbfafc;
+}
+
+
+/* ==========================
+   COMMENT FORM
+========================== */
+
+.comment-form {
+    padding: 15px;
+
+    border: 1px solid #e9e3f0;
+    border-radius: 11px;
+
+    background: #faf9fc;
+}
+
+
+.comment-form textarea,
+.revision-form textarea,
+.revision-form input {
+    width: 100%;
+
+    border: 1px solid #ddd6e7;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #3c3348;
+
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+
+.comment-form textarea,
+.revision-form textarea {
+    resize: vertical;
+
+    padding: 11px 12px;
+}
+
+
+.revision-form input {
+    padding: 11px 12px;
+}
+
+
+.comment-form textarea:focus,
+.revision-form textarea:focus,
+.revision-form input:focus {
+    border-color: #a78bfa;
+
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.08);
+}
+
+
+.comment-form-bottom,
+.revision-form-bottom {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-top: 10px;
+}
+
+
+.form-message {
+    margin: 0;
+
+    color: #8a8192;
+
+    font-size: 11px;
+}
+
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.primary-button {
+    border: none;
+    border-radius: 8px;
+
+    padding: 9px 15px;
+
+    background: #7c3aed;
+    color: #ffffff;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+.primary-button:hover {
+    background: #6d28d9;
+}
+
+
+.primary-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+
+/* ==========================
+   REVISION FORM
+========================== */
+
+.revision-form {
+    padding: 18px;
+
+    border: 1px solid #e9e3f0;
+    border-radius: 11px;
+
+    background: #faf9fc;
+}
+
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #5e5567;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* ==========================
+   REVISION HISTORY
+========================== */
+
+.revision-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+
+/* Matches JS */
+
+.revision {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 13px 15px;
+
+    border: 1px solid #eeeaf3;
+    border-radius: 9px;
+
+    background: #faf9fc;
+}
+
+
+.revision strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #3b304b;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.revision p {
+    margin: 0;
+
+    color: #8a8192;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+
+.revision a {
+    flex-shrink: 0;
+
+    padding: 7px 10px;
+
+    border-radius: 7px;
+
+    background: #eee8f8;
+    color: #6d28d9;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+
+.revision a:hover {
+    background: #e3d7f2;
+}
+
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width: 850px) {
+
+    .review-header {
+        padding: 0 20px;
+    }
+
+    .review-container {
+        width: calc(100% - 30px);
+
+        margin-top: 20px;
+    }
+
+    .asset-preview-layout {
+        min-height: 300px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .review-header {
+        height: 70px;
+    }
+
+    .header-info h1 {
+        font-size: 16px;
+    }
+
+    .header-info p {
+        font-size: 10px;
+    }
+
+    .asset-preview-section,
+    .review-section {
+        padding: 18px;
+    }
+
+    .preview-header {
+        flex-direction: column;
+    }
+
+    .comment-form-bottom,
+    .revision-form-bottom {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .primary-button {
+        width: 100%;
+    }
+
+    .revision {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+}

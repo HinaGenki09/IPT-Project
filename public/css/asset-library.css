@@ -1,0 +1,748 @@
+/* ==========================
+   GENERAL
+========================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    background: #f6f5f8;
+    color: #29223a;
+}
+
+
+/* ==========================
+   SIDEBAR
+========================== */
+
+.asset-sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 155px;
+    height: 100vh;
+
+    background: #F8F6FD;
+
+    border-right: 1px solid #e5dfef;
+
+    padding: 10px;
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow-y: auto;
+}
+
+
+/* ==========================
+   SIDEBAR MENU
+========================== */
+
+.sidebar-menu-wrapper {
+    position: relative;
+
+    margin-bottom: 14px;
+}
+
+.sidebar-menu-button {
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #ece3f7;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: #7c3aed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-menu-button:hover {
+    background: #f1ebfa;
+}
+
+
+/* ==========================
+   ACCOUNT MENU
+========================== */
+
+.sidebar-account-menu {
+    position: absolute;
+
+    top: 42px;
+    left: 0;
+
+    width: 135px;
+
+    background: white;
+
+    border: 1px solid #ece3f7;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 8px 20px
+        rgba(50, 30, 80, 0.12);
+
+    padding: 5px;
+
+    display: none;
+
+    z-index: 20;
+}
+
+.sidebar-account-menu.show {
+    display: block;
+}
+
+.account-menu-item {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 6px;
+
+    padding: 8px;
+
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+.account-menu-item:hover {
+    background: #f1ebfa;
+}
+
+
+/* ==========================
+   NOTIFICATION
+========================== */
+
+.notification-button {
+    position: relative;
+
+    width: 35px;
+    height: 35px;
+
+    border: 1px solid #ece3f7;
+
+    background: #ffffff;
+
+    border-radius: 8px;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: #7c3aed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 14px;
+}
+
+.notification-button:hover {
+    background: #f1ebfa;
+}
+
+.notification-dot {
+    position: absolute;
+
+    top: 7px;
+    right: 7px;
+
+    width: 7px;
+    height: 7px;
+
+    background: #ef4444;
+
+    border-radius: 50%;
+
+    display: none;
+}
+
+
+/* ==========================
+   SIDEBAR NAVIGATION
+========================== */
+
+.sidebar-navigation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+
+    margin-top: 0;
+}
+
+.sidebar-item {
+    width: 100%;
+
+    border: none;
+
+    background: transparent;
+
+    border-radius: 7px;
+
+    padding: 8px 9px;
+
+    text-align: left;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    cursor: pointer;
+
+    color: #333;
+}
+
+.sidebar-item:hover {
+    background: #f1ebfa;
+}
+
+.sidebar-item.active {
+    background: #e3d1eb;
+
+    color: #4f20a8;
+
+    font-weight: 600;
+}
+
+
+/* ==========================
+   HEADER
+========================== */
+
+.asset-header {
+    margin-left: 155px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 25px 40px;
+
+    background: white;
+
+    border-bottom: 1px solid #e7e2ed;
+}
+
+.asset-header h1 {
+    margin: 0 0 5px;
+
+    font-size: 25px;
+
+    font-weight: 600;
+
+    color: #302642;
+}
+
+.asset-header p {
+    margin: 0;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* ==========================
+   BACK BUTTON
+========================== */
+
+.back-button {
+    border: 1px solid #e5dff0;
+
+    background: #f8f6fd;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 9px;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: #6c4ab6;
+
+    transition: 0.2s;
+}
+
+.back-button:hover {
+    background: #eee8f8;
+}
+
+
+/* ==========================
+   MAIN CONTAINER
+========================== */
+
+.asset-container {
+    margin-left: 155px;
+
+    padding: 32px 40px;
+}
+
+
+/* ==========================
+   TOP SECTION
+========================== */
+
+.asset-top {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+.asset-top h2 {
+    margin: 0;
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #302642;
+}
+
+.asset-top p {
+    margin: 5px 0 0;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* ==========================
+   UPLOAD BUTTON
+========================== */
+
+.upload-button {
+    border: none;
+
+    background: #6c4ab6;
+
+    color: white;
+
+    padding: 11px 17px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+
+    transition: 0.2s;
+}
+
+.upload-button:hover {
+    background: #573a99;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==========================
+   ASSET GRID
+========================== */
+
+.asset-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(230px, 1fr)
+        );
+
+    gap: 18px;
+}
+
+
+/* ==========================
+   ASSET CARD
+========================== */
+
+.asset-card {
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid #e8e3ed;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+.asset-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #d9cbed;
+
+    box-shadow:
+        0 8px 20px
+        rgba(70, 45, 100, 0.09);
+}
+
+
+/* ==========================
+   ASSET PREVIEW
+========================== */
+
+.asset-preview {
+    width: 100%;
+
+    height: 170px;
+
+    background: #f1eff4;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.asset-preview img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.file-preview {
+    font-size: 45px;
+
+    color: #777;
+}
+
+
+/* ==========================
+   ASSET INFO
+========================== */
+
+.asset-info {
+    padding: 15px;
+}
+
+.asset-name {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    color: #302642;
+}
+
+.asset-description {
+    margin: 0 0 12px;
+
+    font-size: 11px;
+
+    color: #777;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==========================
+   STATUS
+========================== */
+
+.asset-status {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+.status-pending {
+    background: #eee;
+
+    color: #666;
+}
+
+.status-reviewed {
+    background: #eee0ff;
+
+    color: #6842a8;
+}
+
+.status-approved {
+    background: #e0f5e8;
+
+    color: #287547;
+}
+
+
+/* ==========================
+   EMPTY MESSAGE
+========================== */
+
+.empty-message {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 60px;
+
+    color: #888;
+
+    background: white;
+
+    border-radius: 12px;
+
+    border: 1px dashed #d8d1e0;
+}
+
+
+/* ==========================
+   MODAL
+========================== */
+
+.modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(30, 20, 45, 0.45);
+
+    align-items: center;
+
+    justify-content: center;
+
+    z-index: 1000;
+}
+
+.modal.show {
+    display: flex;
+}
+
+
+/* ==========================
+   MODAL CONTENT
+========================== */
+
+.modal-content {
+    width: 420px;
+
+    max-width: 90%;
+
+    background: white;
+
+    border-radius: 12px;
+
+    padding: 25px;
+
+    position: relative;
+
+    box-shadow:
+        0 15px 40px
+        rgba(40, 25, 60, 0.15);
+}
+
+.modal-content h2 {
+    margin-top: 0;
+
+    margin-bottom: 25px;
+
+    font-size: 20px;
+
+    color: #302642;
+}
+
+
+/* ==========================
+   CLOSE
+========================== */
+
+.close-button {
+    position: absolute;
+
+    top: 12px;
+
+    right: 15px;
+
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    color: #777;
+}
+
+
+/* ==========================
+   FORM
+========================== */
+
+.modal-content label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    margin-top: 15px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    color: #403752;
+}
+
+.modal-content input,
+.modal-content textarea,
+.modal-content select {
+    width: 100%;
+
+    padding: 10px;
+
+    border: 1px solid #dcd6e4;
+
+    border-radius: 7px;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    outline: none;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus,
+.modal-content select:focus {
+    border-color: #9a78d1;
+
+    box-shadow:
+        0 0 0 2px
+        rgba(139, 92, 246, 0.08);
+}
+
+.modal-content textarea {
+    min-height: 80px;
+
+    resize: vertical;
+}
+
+
+/* ==========================
+   SAVE
+========================== */
+
+.save-button {
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 11px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #6c4ab6;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+.save-button:hover {
+    background: #573a99;
+}
+
+
+/* ==========================
+   MESSAGE
+========================== */
+
+.asset-message {
+    font-size: 12px;
+
+    margin: 10px 0 0;
+
+    color: #b33;
+}

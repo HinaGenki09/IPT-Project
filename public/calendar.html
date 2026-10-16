@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Calendar</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/calendar.css"
+    >
+
+    <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+>
+
+<link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+>
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+>
+
+</head>
+
+<body>
+
+
+   <aside class="calendar-sidebar">
+
+    <div class="sidebar-menu-wrapper">
+
+        <button
+            class="sidebar-menu-button"
+            id="sidebarMenuButton"
+        >
+            ☰
+        </button>
+
+        <div
+            class="sidebar-account-menu"
+            id="sidebarAccountMenu"
+        >
+
+            <button
+                class="account-menu-item"
+                id="profileMenuButton"
+            >
+                👤
+                <span>Profile</span>
+            </button>
+
+            <button
+                class="account-menu-item"
+                id="logoutMenuButton"
+            >
+                ↪
+                <span>Log Out</span>
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- NOTIFICATIONS -->
+
+    <button
+        class="notification-button"
+        id="notificationButton"
+    >
+
+        🔔
+
+        <span
+            class="notification-dot"
+            id="notificationDot"
+        ></span>
+
+    </button>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="sidebar-navigation">
+
+        <button
+            class="sidebar-item"
+            id="homeButton"
+        >
+            🏠
+            <span>Dashboard</span>
+        </button>
+
+
+        <button
+            class="sidebar-item active"
+            id="calendarSidebarButton"
+        >
+            🗓
+            <span>Calendar</span>
+        </button>
+
+
+        <button
+            class="sidebar-item"
+            id="assetSidebarButton"
+        >
+            📁
+            <span>Asset Library</span>
+        </button>
+
+        <button
+            class="sidebar-item brief-sidebar-item"
+            id="briefSidebarButton"
+        >
+            📝
+            <span>Campaign Brief</span>
+        </button>
+
+        <button
+            class="sidebar-item"
+            id="referencesSidebarButton"
+        >
+            🔗
+            <span>References</span>
+        </button>
+
+    </nav>
+
+</aside>
+
+
+
+    <!-- ==========================
+         MAIN PAGE
+    =========================== -->
+
+    <div class="calendar-page">
+
+
+        <!-- HEADER -->
+
+        <header class="calendar-header">
+
+            <h1>
+                Calendar
+            </h1>
+
+        </header>
+
+
+
+        <!-- ==========================
+             CALENDAR LAYOUT
+        =========================== -->
+
+        <main class="calendar-layout">
+
+
+            <!-- LEFT CALENDAR -->
+
+            <section class="calendar-card">
+
+
+                <div class="calendar-card-header">
+
+                    <div>
+
+                        <h2>
+                            Campaign Calendar
+                        </h2>
+
+                        <p>
+                            Deadlines, posting dates and meetings update automatically
+                        </p>
+
+                    </div>
+
+
+                    <div class="calendar-header-buttons">
+
+                        <button
+                            id="todayButton"
+                            class="today-button"
+                        >
+                            Today
+                        </button>
+
+
+                        <button
+                            id="addNoteButton"
+                            class="add-note-button"
+                        >
+                            + &nbsp; Add Note
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="calendar-content">
+
+
+                    <div class="calendar-month-header">
+
+                        <h2 id="monthYear">
+                            October 2026
+                        </h2>
+
+
+                        <div class="month-navigation">
+
+                            <button id="previousMonth">
+                                ‹
+                            </button>
+
+                            <button id="nextMonth">
+                                ›
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="calendar-weekdays">
+
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+
+                    </div>
+
+
+
+                    <div
+                        id="calendarGrid"
+                        class="calendar-grid"
+                    >
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- RIGHT SELECTED DAY -->
+
+            <aside class="selected-day-card">
+
+
+                <div class="selected-day-header">
+
+                    <h2 id="selectedDate">
+                        Sat, October 24, 2026
+                    </h2>
+
+                    <p id="itemCount">
+                        0 items
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    id="selectedDayItems"
+                    class="selected-day-items"
+                >
+                </div>
+
+
+
+                <button
+                    id="addDayNoteButton"
+                    class="add-day-note-button"
+                >
+                    + &nbsp; Add note on this day
+                </button>
+
+            </aside>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- ==========================
+         ADD NOTE MODAL
+    =========================== -->
+
+    <div
+        id="noteModal"
+        class="note-modal"
+    >
+
+        <div class="note-modal-content">
+
+
+            <div class="note-modal-header">
+
+                <h2>
+                    Add Note
+                </h2>
+
+                <button
+                    id="closeNoteModal"
+                    class="close-note-button"
+                >
+                    ×
+                </button>
+
+            </div>
+
+
+            <label for="noteTitle">
+                Note Title
+            </label>
+
+            <input
+                type="text"
+                id="noteTitle"
+                placeholder="e.g. Content meeting"
+            >
+
+
+            <label for="noteDetails">
+                Note
+            </label>
+
+            <textarea
+                id="noteDetails"
+                placeholder="Write your note..."
+            ></textarea>
+
+
+            <label for="noteDate">
+                Date
+            </label>
+
+            <input
+                type="date"
+                id="noteDate"
+            >
+
+
+            <p
+                id="noteMessage"
+                class="note-message"
+            ></p>
+
+
+            <div class="note-modal-actions">
+
+                <button
+                    id="cancelNoteButton"
+                    class="cancel-note-button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="saveNoteButton"
+                    class="save-note-button"
+                >
+                    Save Note
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="/js/calendar.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Enter</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/enter.css"
+    >
+
+</head>
+
+<body>
+
+    <main class="enter-page">
+
+        <section class="enter-card">
+
+            <p class="enter-eyebrow">
+                WELCOME
+            </p>
+
+            <h1>
+                Choose how you want to enter
+            </h1>
+
+            <p class="enter-description">
+                Select the type of account you will use.
+            </p>
+
+
+            <div class="enter-options">
+
+                <!-- CONTENT CREATOR -->
+
+                <button
+                    class="enter-option"
+                    onclick="selectAccountType('Content Creator')"
+                >
+
+                    <div class="enter-icon">
+                        CC
+                    </div>
+
+                    <div class="enter-option-text">
+
+                        <strong>
+                            Content Creator
+                        </strong>
+
+                        <span>
+                            Manage campaigns, content, tasks, and assets.
+                        </span>
+
+                    </div>
+
+                </button>
+
+
+                <!-- CLIENT -->
+
+                <button
+                    class="enter-option"
+                    onclick="selectAccountType('Client')"
+                >
+
+                    <div class="enter-icon">
+                        CL
+                    </div>
+
+                    <div class="enter-option-text">
+
+                        <strong>
+                            Client
+                        </strong>
+
+                        <span>
+                            Review campaign content, assets, tasks, and updates.
+                        </span>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+
+            <p
+                id="enterError"
+                class="enter-error"
+            ></p>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/enter.js"></script>
+
+</body>
+
+</html>

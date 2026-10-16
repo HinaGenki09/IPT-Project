@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Audit Logs</title>
+
+    <link
+        rel="stylesheet"
+        href="/css/audit-log.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         REFERENCES SIDEBAR
+    ========================== -->
+
+    <aside class="references-sidebar">
+
+        <div class="sidebar-menu-wrapper">
+
+            <button
+                class="sidebar-menu-button"
+                id="sidebarMenuButton"
+            >
+                ☰
+            </button>
+
+            <div
+                class="sidebar-account-menu"
+                id="sidebarAccountMenu"
+            >
+
+                <button
+                    class="account-menu-item"
+                    id="profileMenuButton"
+                >
+                    👤
+                    <span>Profile</span>
+                </button>
+
+                <button
+                    class="account-menu-item"
+                    id="logoutMenuButton"
+                >
+                    ↪
+                    <span>Log Out</span>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- NOTIFICATIONS -->
+
+        <button
+            class="notification-button"
+            id="notificationButton"
+        >
+
+            🔔
+
+            <span
+                class="notification-dot"
+                id="notificationDot"
+            ></span>
+
+        </button>
+
+
+        <!-- NAVIGATION -->
+
+        <nav class="sidebar-navigation">
+
+            <button
+                class="sidebar-item"
+                id="homeButton"
+            >
+                🏠
+                <span>Dashboard</span>
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                id="calendarSidebarButton"
+            >
+                🗓
+                <span>Calendar</span>
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                id="assetSidebarButton"
+            >
+                📁
+                <span>Asset Library</span>
+            </button>
+
+
+            <button
+                class="sidebar-item brief-sidebar-item"
+                id="briefSidebarButton"
+            >
+                📝
+                <span>Brief</span>
+            </button>
+
+
+            <button
+                class="sidebar-item"
+                id="referencesSidebarButton"
+            >
+                🔗
+                <span>References</span>
+            </button>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- ==========================
+         AUDIT PAGE
+    ========================== -->
+
+    <main class="audit-page">
+
+        <header class="audit-header">
+
+            <div>
+
+                <h1>
+                    🕘 Audit Logs
+                </h1>
+
+                <p>
+                    Track important activity in this campaign.
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <!-- ==========================
+             AUDIT LIST
+        ========================== -->
+
+        <section
+            class="audit-list"
+            id="auditList"
+        >
+
+            <p class="loading-message">
+                Loading activity...
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <script src="/js/audit-log.js"></script>
+
+</body>
+
+</html>
