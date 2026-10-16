@@ -37,7 +37,7 @@ mongoose
     });
 
 app.get("/", (req, res) => {
-    res.send("Social Media Workflow System is running!");
+    res.sendFile(__dirname + "/public/login.html");
 });
 
 const PORT = process.env.PORT || 3000;
