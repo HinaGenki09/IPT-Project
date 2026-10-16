@@ -5,6 +5,30 @@ const mongoose = require("mongoose");
 
 const app = express();
 
+let connectionPromise;
+
+async function connectDB() {
+    if (mongoose.connection.readyState === 1) {
+        return;
+    }
+
+    if (!connectionPromise) {
+        connectionPromise = mongoose
+            .connect(process.env.MONGODB_URI)
+            .catch((error) => {
+                connectionPromise = null;
+                throw error;
+            });
+    }
+
+    try {
+        await connectionPromise;
+    } catch (error) {
+        connectionPromise = null;
+        throw error;
+    }
+}
+
 app.use(express.json());
 app.use(express.static("public"));
 
@@ -17,6 +41,22 @@ const assetRoutes = require("./routes/assetRoutes");
 const calendarRoutes = require("./routes/calendarRoutes");
 const referenceRoutes = require("./routes/referenceRoutes");
 
+app.use("/api", async (req, res, next) => {
+    try {
+        await connectDB();
+        next();
+    } catch (error) {
+        console.error(
+            "MongoDB connection error:",
+            error.message
+        );
+
+        res.status(503).json({
+            message: "Database temporarily unavailable. Please try again."
+        });
+    }
+});
+
 
 app.use("/api/auth", authRoutes);
 app.use("/api/campaigns", campaignRoutes);
@@ -27,14 +67,7 @@ app.use("/api/assets", assetRoutes);
 app.use("/api/calendar", calendarRoutes);
 app.use("/api/references", referenceRoutes);
 
-mongoose
-    .connect(process.env.MONGODB_URI)
-    .then(() => {
-        console.log("MongoDB connected");
-    })
-    .catch((error) => {
-        console.error("MongoDB connection error:", error);
-    });
+console.log("MONGODB_URI exists:", Boolean(process.env.MONGODB_URI));
 
 app.get("/", (req, res) => {
     res.sendFile(__dirname + "/public/login.html");
